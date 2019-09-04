@@ -1,0 +1,106 @@
+/*# is a id target
+So in this case, there is a DIV in index.html that has a
+id name container and we apply those properies to the DIV
+
+
+the . operation is used to apply something, in the js file of
+this project we use a toggleClass function which takes in a class
+as import and in this class it takes all the properties of .completed
+and applies it to the element of our choosing
+
+if the identifer before the {} is just a name, it really just refers to
+a html tag*/
+
+h1{
+	background: #2980b9;
+	color:white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+ul{
+	list-style: none; /*removes the dots on each item*/
+	margin:0;
+	padding: 0;
+ }
+
+li{
+	background: #fff;
+	height: 40px;
+	line-height: 40px;
+	color:#666;
+}
+
+
+li:nth-child(2n){ /*this makes it so every 2 li is of this nature*/
+	background: #f7f7f7;
+}
+
+input {
+	color: #2980b9 ;
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width: 100%; 
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;  /*forces input to stay within div
+	without this, it will go pass the div*/
+	border: 3px solid rgba(0,0,0,0); /*this will force the input box to 
+	be flush with the div */
+}
+/*input:focus is basically when the mouse click on this*/
+input:focus{
+background: #fff;
+border: 3px solid #2980b9;
+outline: none;
+}
+
+body{
+ 	font-family: Roboto;
+ }
+
+/*targeting font awesome artwork with . operator*/
+.fa-pencil-alt{
+float: right;
+}
+
+span{
+	background:#e74c3c; /*red background for span*/  
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white; /*forces icon to be white in color*/
+	width: 0; /*have this originally be hidden*/
+	display: inline-block; /*the icon won't move without this*/
+	opacity:0; /*basically make the icon invisible*/
+	transition: .2s linear; /*transition time for the icon to reveal*/
+}
+
+/*the below span says when we are in a LI and we hover over a span,
+then change the span to 40px*/
+li:hover span {
+	width: 40px; /*reveals the icon*/
+	opacity: 1.0; /*gives the icon color again*/
+}
+
+body{
+ 	background: #24C6DC;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #514A9D, #24C6DC);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #514A9D, #24C6DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ }
+
+/*the container for index's div containting todo*/
+#container{
+	width: 360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+}
+
+/*class that*/
+.completed {
+	color:gray;
+	text-decoration: line-through;
+}
